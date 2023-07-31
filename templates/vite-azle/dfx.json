@@ -1,0 +1,24 @@
+{
+  "canisters": {
+    "counter": {
+      "type": "custom",
+      "build": "npx azle counter",
+      "root": "src",
+      "ts": "backend/index.ts",
+      "candid": "backend/index.did",
+      "wasm": ".azle/counter/counter.wasm.gz"
+    },
+    "frontend": {
+      "dependencies": ["counter"],
+      "type": "assets",
+      "source": ["dist/"]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "npm run --silent sources"
+    }
+  },
+  "output_env_file": ".env",
+  "version": 2
+}
