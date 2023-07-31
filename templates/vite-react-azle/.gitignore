@@ -30,6 +30,9 @@ dist-ssr
 .vessel
 .mops
 
+# Azle
+.azle
+
 # Environment variables
 .env
 .env.local
