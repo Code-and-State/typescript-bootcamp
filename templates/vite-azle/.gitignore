@@ -29,6 +29,7 @@ dist-ssr
 .dfx
 .vessel
 .mops
+.azle
 
 # Environment variables
 .env
