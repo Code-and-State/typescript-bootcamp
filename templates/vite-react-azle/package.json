@@ -1,28 +1,28 @@
 {
-  "name": "vite-react-motoko",
+  "name": "vite-react-azle",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "setup": "npm i && dfx canister create backend && dfx generate backend && dfx deploy",
     "start": "run-p frontend backend",
     "frontend": "vite --port 3000",
-    "backend": "mo-dev --generate --deploy -y",
     "build": "tsc && vite build",
     "test": "run-s  test:frontend",
+    "pretest:backend": "AZLE_REBUILD=true ts-node -P tsconfig.node.json --transpile-only --ignore=false backend/tests/pretest.ts",
     "test:frontend": "vitest run",
-    "test:backend": "",
+    "test:backend": "AZLE_REBUILD=true ts-node -P tsconfig.node.json --transpile-only --ignore=false backend/tests/test.ts",
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" "
   },
   "dependencies": {
+    "azle": "^0.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "azle" : "^0.17.1"
+    "ts-node": "10.7.0"
   },
   "devDependencies": {
-    "@dfinity/agent": "^0.17.0",
-    "@dfinity/candid": "^0.17.0",
-    "@dfinity/principal": "^0.17.0",
+    "@dfinity/agent": "^0.18.1",
+    "@dfinity/candid": "^0.18.1",
+    "@dfinity/principal": "^0.18.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.14",
@@ -35,7 +35,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
     "sass": "^1.63.6",
-    "typescript": "^5.1.3",
+    "typescript": "^5.1.6",
     "vite": "^4.3.9",
     "vite-plugin-environment": "^1.1.3",
     "vitest": "^0.32.2"

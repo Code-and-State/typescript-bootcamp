@@ -1325,7 +1325,7 @@ function add(n) {
 exports.add = add;
 function inc() {
     counter += BigInt(1);
-    return;
+    return counter;
 }
 exports.inc = inc;
 

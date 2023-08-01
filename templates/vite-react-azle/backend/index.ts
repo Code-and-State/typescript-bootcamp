@@ -19,8 +19,8 @@ export function add(n : nat): nat {
 
 
 $update;
-export function inc(): void {
+export function inc(): nat {
     counter += BigInt(1);
-    return
+    return counter
 }
 
