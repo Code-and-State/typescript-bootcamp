@@ -1,6 +1,6 @@
 import { getCanisterId, runTests } from 'azle/test';
 import { createActor } from '../../src/declarations/backend/index.js';
-import { get_tests } from './tests';
+import { get_tests } from './tests.js';
 import { HttpAgent } from "@dfinity/agent";
 
 

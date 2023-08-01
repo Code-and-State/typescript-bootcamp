@@ -1,6 +1,6 @@
 import { ActorSubclass } from '@dfinity/agent';
 import { Test } from 'azle/test';
-import { _SERVICE } from '../../src/declarations/backend/backend.did.d';
+import { _SERVICE } from '../../src/declarations/backend/backend.did';
 
 export function get_tests(backend: ActorSubclass<_SERVICE>): Test[] {
   return [
