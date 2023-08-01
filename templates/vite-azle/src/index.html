@@ -2,12 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + Motoko</title>
+    <title>Vite + Azle</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="./main.tsx"></script>
+    <div class="App">
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="assets/vite.svg" class="logo vite" alt="Vite logo" />
+        </a>
+        <a href="https://github.com/demergent-labs/azle" target="_blank">
+          <span class="logo-stack">
+            <img
+              src="assets/azle_shadow.png"
+              class="logo azle-shadow"
+              alt="Azle logo"
+            />
+            <img src="assets/azle_logo.svg" class="logo azle" alt="Azle logo" />
+          </span>
+        </a>
+      </div>
+      <h1>Vite + Azle</h1>
+      <div class="card">
+        <button id="button" data-loading="false">
+          Count is <span id="count">0</span>
+        </button>
+      </div>
+      <p class="read-the-docs">
+        Click on the Vite and Azle logos to learn more
+      </p>
+    </div>
+    <script type="module" src="./main.ts"></script>
   </body>
 </html>
