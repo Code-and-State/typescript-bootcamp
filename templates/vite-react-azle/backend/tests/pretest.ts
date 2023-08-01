@@ -7,13 +7,18 @@ async function pretest() {
         stdio: 'inherit'
     });
 
-    execSync(`dfx deploy  backend`, {
+    execSync(`dfx deploy backend`, {
         stdio: 'inherit'
     });
 
     execSync(`dfx generate backend`, {
         stdio: 'inherit'
     });
+
+    execSync(`bash backend/tests/scripts/copy-dec.sh`, {
+        stdio: 'inherit'
+    });
+
 }
 
 pretest();

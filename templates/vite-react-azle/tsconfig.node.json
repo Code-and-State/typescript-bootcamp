@@ -5,6 +5,7 @@
         "experimentalDecorators": true,
         "strictPropertyInitialization": false,
         "moduleResolution": "node",
+        "esModuleInterop": true,
         "allowJs": true,
         "outDir": "HACK_BECAUSE_OF_ALLOW_JS"
     }

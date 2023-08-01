@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { backend } from "../declarations/backend";
+  import { backend } from "../declarations/backend/index.js";
 
   let count : BigInt = BigInt(0);
 

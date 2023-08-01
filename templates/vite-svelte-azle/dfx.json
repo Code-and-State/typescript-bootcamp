@@ -8,7 +8,7 @@
       "candid": "backend/index.did",
       "wasm": ".azle/backend/backend.wasm.gz",
       "declarations": {
-        "output": "src/declarations/backend",
+        "output": "declarations/backend",
         "node_compatibility": true
       }
     },
