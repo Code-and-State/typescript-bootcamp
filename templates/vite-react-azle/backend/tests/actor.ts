@@ -1,9 +1,9 @@
 import { Actor, HttpAgent } from '@dfinity/agent';
-import type { Principal } from '@dfinity/principal';
-import type { IDL } from '@dfinity/candid';
-import type { ActorSubclass } from '@dfinity/agent';
 import { getCanisterId } from 'azle/test';
 import { idlFactory } from "./declarations/backend/backend.did";
+import type { IDL } from '@dfinity/candid';
+import type { Principal } from '@dfinity/principal';
+import type { ActorSubclass } from '@dfinity/agent';
 
 function createActor<T>(
   canisterId: string | Principal,
