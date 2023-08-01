@@ -1,0 +1,24 @@
+{
+  "canisters": {
+    "backend": {
+      "type": "custom",
+      "build": "npx azle backend",
+      "root": "src",
+      "ts": "backend/index.ts",
+      "candid": "backend/index.did",
+      "wasm": ".azle/backend/backend.wasm.gz"
+    },
+    "frontend": {
+      "dependencies": ["backend"],
+      "type": "assets",
+      "source": ["dist/"]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "npm run --silent sources"
+    }
+  },
+  "output_env_file": ".env",
+  "version": 2
+}

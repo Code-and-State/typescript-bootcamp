@@ -65,11 +65,8 @@ function App() {
       <h1>Vite + React + Azle</h1>
       <div className="card">
         <button onClick={increment} style={{ opacity: loading ? 0.5 : 1 }}>
-          count is {count}
+          Count is {count}
         </button>
-        <p>
-          Edit <code>backend/Backend.mo</code> and save to test HMR
-        </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite, React, and Azle logos to learn more

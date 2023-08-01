@@ -6,19 +6,15 @@
     "setup": "npm i && dfx canister create backend && dfx generate backend && dfx deploy",
     "start": "run-p frontend backend",
     "frontend": "vite --port 3000",
-    "backend" : "dfx deploy backend",
+    "backend": "dfx deploy backend",
     "build": "tsc && vite build",
-    "test": "run-s  test:frontend",
     "pretest:backend": "AZLE_REBUILD=true ts-node -P tsconfig.node.json --transpile-only --ignore=false backend/tests/pretest.ts",
-    "test:frontend": "vitest run",
     "test:backend": "AZLE_REBUILD=true ts-node -P tsconfig.node.json --transpile-only --ignore=false backend/tests/test.ts",
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" "
   },
   "dependencies": {
     "azle": "^0.17.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "ts-node": "10.7.0"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@dfinity/agent": "^0.18.1",
@@ -29,6 +25,8 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.1",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vuedx/typescript-plugin-vue": "^0.7.6",
     "bignumber.js": "^9.1.1",
     "cross-fetch": "^3.1.6",
     "dotenv": "^16.3.1",
@@ -38,6 +36,7 @@
     "prettier": "^2.8.8",
     "rimraf": "^5.0.1",
     "sass": "^1.63.6",
+    "ts-node": "10.7.0",
     "typescript": "^5.1.6",
     "vite": "^4.3.9",
     "vite-plugin-environment": "^1.1.3",
