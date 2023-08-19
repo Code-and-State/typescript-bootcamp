@@ -6,11 +6,7 @@
       "root": "src",
       "ts": "backend/index.ts",
       "candid": "backend/index.did",
-      "wasm": ".azle/backend/backend.wasm.gz",
-      "declarations": {
-        "output": "declarations/backend",
-        "node_compatibility": true
-      }
+      "wasm": ".azle/backend/backend.wasm.gz"
     },
     "frontend": {
       "dependencies": ["backend"],
