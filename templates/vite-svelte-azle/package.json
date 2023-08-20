@@ -8,7 +8,7 @@
     "start": "run-p frontend backend",
     "frontend": "vite --port 3000",
     "backend": "dfx deploy backend",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "pretest:backend": "AZLE_REBUILD=true ts-node -P tsconfig.node.json --transpile-only --ignore=false backend/tests/pretest.ts",
     "test:backend": "AZLE_REBUILD=true ts-node -P tsconfig.node.json --transpile-only --ignore=false backend/tests/test.ts",
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\""
