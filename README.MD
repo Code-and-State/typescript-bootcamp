@@ -11,6 +11,7 @@ This repository contains template projects for getting started with TypeScript o
 - [React](./templates/vite-react-azle/README.md)
 - [Vue](./templates/vite-vue-azle/README.md)
 - [Svelte](./templates/vite-svelte-azle/README.md)
+- [NextJS](./templates/next-azle/README.md)
 
 ## Any question?
 Make sure to join our [community Discord](https://discord.gg/VxC9UXpy4c)!
