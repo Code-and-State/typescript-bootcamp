@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "setup": "npm i && dfx canister create backend && dfx generate backend && dfx deploy",
-    "start": "run-p frontend backend",
+    "start": "run-p frontend",
     "frontend": "vite --port 3000",
     "backend": "dfx deploy backend",
     "build": "vite build",
