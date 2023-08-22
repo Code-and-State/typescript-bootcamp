@@ -1,24 +1,23 @@
 <script lang="ts">
-  import { backend } from "../declarations/backend/index.js";
+  import { backend } from '../declarations/backend/index.js';
+  import { HttpAgent } from '@dfinity/agent';
+  import { AuthClient } from '@dfinity/auth-client';
 
-  let count : BigInt = BigInt(0);
+  const login = async () => {
+    const authClient = await AuthClient.create();
+    authClient.login({
+      identityProvider: process.env.DFX_NETWORK == 'local' ? `http://127.0.0.1:4943/?canisterId=${process.env.CANISTER_ID_INTERNET_IDENTITY}` : 'https://identity.ic0.app/',
+      maxTimeToLive: BigInt(7 * 24 * 60 * 60 * 1000 * 1000 * 1000),
+      onSuccess: async () => {},
+    });
 
-  const refreshCounter = async () => {
-    const freshCount = await backend.get()
-    count = freshCount;
-  }
-
-  const increment = async () => {
-    await backend.inc()
-    await refreshCounter()
-  }
-
-  refreshCounter()
+    const identity = await authClient.getIdentity();
+    const principal = identity.getPrincipal().toString();
+  };
 
 
 </script>
+
 <div class="example">
-  <button on:click={increment}>
-    Count is {count}
-  </button>
+  <button on:click={login}> Login </button>
 </div>

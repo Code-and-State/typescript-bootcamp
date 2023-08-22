@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "setup": "npm i && dfx canister create backend && dfx generate backend && dfx deploy",
-    "start": "run-p frontend backend",
+    "start": "run-p frontend",
     "frontend": "vite --port 3000",
     "backend": "dfx deploy backend",
     "build": "vite build",
@@ -13,12 +13,11 @@
     "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\" "
   },
   "dependencies": {
-    "azle": "^0.17.1"
+    "azle": "^0.17.1",
+    "@dfinity/auth-client": "^0.18.1",
+    "@dfinity/identity": "^0.18.1"
   },
   "devDependencies": {
-    "@dfinity/agent": "^0.17.0",
-    "@dfinity/candid": "^0.17.0",
-    "@dfinity/principal": "^0.17.0",
     "bignumber.js": "^9.1.1",
     "cross-fetch": "^3.1.6",
     "dotenv": "^16.3.1",

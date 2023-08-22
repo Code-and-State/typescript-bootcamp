@@ -5,8 +5,6 @@ import environment from 'vite-plugin-environment';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
-
 export default defineConfig({
   root: 'src',
   build: {
