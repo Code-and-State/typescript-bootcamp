@@ -29,9 +29,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    environment('all', { prefix: 'CANISTER_' }),
-    environment('all', { prefix: 'DFX_' }),
-    environment({ BACKEND_CANISTER_ID: '' }),
+    environment('all'),
   ],
   test: {
     environment: 'jsdom',
