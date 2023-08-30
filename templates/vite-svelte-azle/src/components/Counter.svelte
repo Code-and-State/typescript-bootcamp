@@ -13,8 +13,7 @@
     await refreshCounter()
   }
 
-  refreshCounter()
-
+  refreshCounter();
 
 </script>
 <div class="example">
