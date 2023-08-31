@@ -7,6 +7,50 @@ For developers who need to deploy **Internet Identity** on their local environme
 ```
 DFX_VERSION=0.14.3-beta.0 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 ```
+## Troubleshooting dfx setup
+If you get any errors while installing dfx and can't solve them you can try this installation method and work with CLI inside a container with its own environment isolated from the main system. Using this method you can exerment with the installation inside the container without the risk of breaking something inside your OS.
+### Install Docker
+If the `docker -v` command outputs something like 
+```
+Docker version 24.0.2 ...
+``` 
+then skip the Docker installation step and go straight to the next step.
+Go to the link and follow the instructions to install: 
+```
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+```
+
+### Create an isolated environment
+In VS code, open the extensions panel enter `Dev Containers` in the search and install the extension from Microsoft verified publisher.
+
+Once the extension is installed, go to `View -> Command Palette` and type `(re)open folder in container`. 
+
+At the prompt opens, type Ubuntu and hit enter then select `jammy` and hit enter and then click `OK`.
+
+After downloading the images, docker will create a new container based on Ubuntu 22.04 lts and connect the project directory to it.
+Now you are working in the container and your terminal should look something like this: 
+```
+vscode ➜ /workspaces/typescript-bootcamp (main) $ 
+```
+
+### Setup nodejs using nvm
+To work with `azel` you also need to install `nodejs`. The easiest way to do this is to use node version manager(`nvm`). Here is a complete guide for different operating systems 
+```
+https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+```
+
+Enter this command in the terminal 
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+``` 
+
+This command will download and run the `nvm` installation script and add it to the `PATH` variable.
+
+Type `source ~/.bashrc` in the terminal for the changes to take effect and install the latest recommended version of `nodejs`(18.17.1 at this time) using this command ```nvm install 18.17.1```.
+
+You are ready to go!
+
+Go back to the previous point and install dfx as suggested.
 
 ## Step 1: Add Internet Identity Into Your Project
 In your dfx.json file, locate the canister section and include the following code block:
