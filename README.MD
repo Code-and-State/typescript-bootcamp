@@ -62,13 +62,13 @@ This is a collection of key educational resources that you might find useful. Fo
 ## How to graduate? 🎓
 To graduate, you must create and deploy a DAO that meets the following criteria:
 
-- [] Users must be able to login using an authentication service, such as **Internet Identity**, and set up a profile.
-- [] Upon user login, their information should automatically populate.
-- [] User data should be stored within the canister and remain intact even through upgrades.
-- [] Your application is deployed on the Internet Computer.
-- [] Your source code is published on GitHub and public.
-- [] You’ve used Azle.
-- [] You’ve completed [the graduation form](https://forms.gle/8kHddDJhAUWdQ6S68)
+- [ ] Users must be able to login using an authentication service, such as **Internet Identity**, and set up a profile.
+- [ ] Upon user login, their information should automatically populate.
+- [ ] User data should be stored within the canister and remain intact even through upgrades.
+- [ ] Your application is deployed on the Internet Computer.
+- [ ] Your source code is published on GitHub and public.
+- [ ] You’ve used Azle.
+- [ ] You’ve completed [the graduation form](https://forms.gle/8kHddDJhAUWdQ6S68)
 
 Successfully meeting these requirements aligns with the tasks set for **Day 1** and **2**  of the project.
 
@@ -91,8 +91,9 @@ Successfully meeting these requirements aligns with the tasks set for **Day 1** 
 ## Assistance 🙋
 If you need support or have any question. Make sure to ask your question in the [ask-questions](https://discord.gg/FNSYrvJGnR) section of our Discord.
 
-## Student DAO's ⭐️
 ## License 📝
+
 The [CC BY 4.0](LICENSE.MD) license allows others to distribute, remix, adapt, and build upon your work, even commercially, **as long as they credit you for the original creation**.
+
 ---
 Let's f♾️cking build!
